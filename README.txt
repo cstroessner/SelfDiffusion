@@ -1,4 +1,4 @@
-Code to reproduce the figures in "TODO." by TODO
+Code to reproduce the figures in "TODO" by TODO.
 (Arxiv: TODO set link.)
 
 The MATLAB code is selfcontained. 
