@@ -1,4 +1,5 @@
-Code to reproduce the figures in "Computation of the self-diffusion coefficient with low-rank tensor methods: application to the simulation of a cross-diffusion system." by J.Dabaghi, V.Ehrlacher and D.Kressner
+Code to reproduce the figures in "TODO." by TODO
 (Arxiv: TODO set link.)
 
-This code is selfcontained. The figures can be reproduced by running the scripts experiment1, experiment2, experiment3.
+The MATLAB code is selfcontained. 
+The Julia code requires the packages CSV and DataFrames.
