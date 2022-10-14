@@ -7,15 +7,15 @@ rng(1)
 
 % initialize
 [d,N,K,v,p,vectors,tau] = initialization();
-u = [1,0]; psiDatas = {}; R = 10;
+u = [1,0]; psiDatas = {}; R = 3;
 
-% compute accurate rank-10 approximation
+% compute accurate rank-3 approximation
 tic()
 for r = 1:R
 psiDatas{r} = rand([N,2]);
-psiDatas = ALSsuc(u,psiDatas,v,p,tau,N,10.^(-5),150);
+psiDatas = ALSsuc(u,psiDatas,v,p,tau,N,1e-12,420);
 end
-toc()
+solutionTime = toc()
 psi = @(eta) PsiSuc(eta,psiDatas);
 
 % estimate the trace (exploit symmetry in hopping model: D_11 = D_22)

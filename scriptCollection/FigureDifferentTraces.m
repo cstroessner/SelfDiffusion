@@ -27,6 +27,12 @@ for i = 1:25
 end
 plot((0:24)/24, vals,'b--')
 
+load('Data/matricesLONGhuge.mat')
+for i = 1:36
+    vals(i) = trace(D{i});
+end
+plot((0:35)/35, vals,'m--')
+
 vals = [];
 load('Data/matricesALSsmall.mat') 
 for i = 1:9
@@ -46,10 +52,16 @@ for i = 1:25
 end
 plot((0:24)/24, vals,'b')
 
+load('Data/matricesALShuge.mat') 
+for i = 1:36
+    vals(i) = trace(D{i});
+end
+plot((0:35)/35, vals,'m')
+
 ylabel('Tr($D_s({\rho})$)','Interpreter','latex')
 xlabel('${\rho}$','Interpreter','latex')
-leg = legend('long-term limit N=8','long-term limit N=15','long-term limit N=24',...
-    'minimization N=8','minimization N=15','minimization N=24');
+leg = legend('long-term limit N=8','long-term limit N=15','long-term limit N=24','long-term limit N=35',...
+    'minimization N=8','minimization N=15','minimization N=24','minimization N=35');
 set(leg,'Interpreter','latex');
 print -depsc 'Figures/ComparisonToStochasticApproach.eps'
 

@@ -66,3 +66,26 @@ D = D15;
 save('Data/matricesLONGlmedium.mat','D')
 D = D8;
 save('Data/matricesLONGsmall.mat','D')
+
+
+%% sampling with N = 35
+rng(1)
+addpath('StochasticApproach35')
+tic()
+T = 600;
+trace35 = zeros(36,1);
+D35 = cell(36,1);
+parfor ell = 0:35
+    ell
+    [QOIvec] = stochasticEstimationCombined(ell,ceil(80000/(ell+1)),T);
+    d11 = QOIvec(1);
+    d22 = QOIvec(2);
+    d12 = 0.5*(QOIvec(3)-d11-d22);
+    D35{ell+1} = [d11 d12; d12 d22];
+    trace35(ell+1) = QOIvec(1)+QOIvec(2);        
+end
+t35 = toc();
+t35 = t35*4; %4 = number of parallel workers
+rmpath('StochasticApproach35')
+D = D35;
+save('Data/matricesLONGhuge.mat','D')

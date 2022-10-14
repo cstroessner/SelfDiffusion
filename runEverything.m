@@ -22,3 +22,8 @@ FigureStochasticParameters
 
 %% Figure 6
 FigureStochasticVariance
+
+%% New Figures added during the revision of the paper
+FigureTraceVariance
+FigureVarianceRuntime
+

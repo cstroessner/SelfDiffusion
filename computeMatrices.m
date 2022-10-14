@@ -4,6 +4,7 @@ addpath('scriptCollection')
 computeMatricesForN24
 computeMatricesForN15
 computeMatricesForN8
+computeMatricesForN35
 
 % longterm limit estimation
 computeMatricesLongTerm
