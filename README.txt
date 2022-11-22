@@ -1,4 +1,4 @@
-Code to reproduce the figures in "Tensor approximation of the self-diffusion matrix of tagged
+Code to reproduce the numerical experiments in "Tensor approximation of the self-diffusion matrix of tagged
 particle processes" by J. Dabaghi, V. Ehrlacher and C. Strössner.
 (Arxiv: https://arxiv.org/abs/2204.03943.)
 
